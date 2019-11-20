@@ -13,3 +13,9 @@ interface ApiService {
     suspend fun getPortfolio(): List<PortfolioResponse>
 
 }
+
+
+
+
+
+

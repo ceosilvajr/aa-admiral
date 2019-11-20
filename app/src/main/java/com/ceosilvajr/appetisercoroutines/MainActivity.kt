@@ -2,6 +2,7 @@ package com.ceosilvajr.appetisercoroutines
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.observe
 import com.ceosilvajr.appetisercoroutines.main.MainViewModel
 import com.ceosilvajr.appetisercoroutines.main.PortfolioAdapter
 import com.ceosilvajr.appetisercoroutines.models.Portfolio
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         setContentView(R.layout.activity_main)
         adapter.init(this)
         rv_portfolio.adapter = adapter
-        mainViewModel.portfolioItems.observeForever {
+        mainViewModel.portfolioItems().observe(this) {
             displayPortfolio(it as ArrayList)
         }
     }
