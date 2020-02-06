@@ -8,4 +8,5 @@ import com.ceosilvajr.appetisercoroutines.network.api.ApiService
 class ApiRepository(private val apiService: ApiService) {
 
     suspend fun getPortfolio() = apiService.getPortfolio().map { it.toModel() }
+
 }

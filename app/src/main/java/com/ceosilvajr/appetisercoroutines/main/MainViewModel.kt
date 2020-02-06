@@ -20,4 +20,3 @@ class MainViewModel(private val repository: ApiRepository) : ViewModel() {
         }
     }
 }
-

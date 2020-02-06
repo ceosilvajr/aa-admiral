@@ -32,3 +32,4 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         adapter.updateItems(list)
     }
 }
+
